@@ -21,12 +21,14 @@
             display: flex;
             justify-content: center;
             background-color: #0073e6;
+            flex-wrap: wrap;
         }
         nav a {
             color: white;
             padding: 15px 20px;
             text-decoration: none;
             font-weight: bold;
+            font-size: 0.9em;
         }
         nav a:hover {
             background-color: #005bb5;
@@ -95,21 +97,23 @@
         /* Responsive Design for Mobile Devices (16:9 aspect ratio) */
         @media (max-width: 768px) {
             .hero {
-                padding: 40px 10px;
+                padding: 30px 10px;
             }
             .hero h1 {
                 font-size: 2em;
+            }
+            .hero p {
+                font-size: 1em;
             }
             .section-title {
                 font-size: 1.5em;
             }
             nav a {
-                padding: 10px 15px;
-                font-size: 0.9em;
+                padding: 10px 10px;
             }
             .service-item {
                 max-width: 100%;
-                margin: 10px 0;
+                margin: 15px 0;
             }
         }
     </style>
@@ -180,11 +184,3 @@
 
 </body>
 </html>
-'''
-
-# Saving the updated HTML content to a new file
-responsive_file_path = "/mnt/data/ATJ_homepage_responsive.html"
-with open(responsive_file_path, "w", encoding="utf-8") as file:
-    file.write(responsive_html_content)
-
-responsive_file_path
