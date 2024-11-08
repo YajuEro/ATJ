@@ -1,0 +1,194 @@
+# Adjusting the HTML content to be more responsive, particularly for 16:9 aspect ratio mobile devices.
+# Adding media queries for smaller screen sizes to optimize the layout.
+
+responsive_html_content = '''
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>オールチビジャパン - ATJ</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            color: #333;
+        }
+        header {
+            background-color: #004aad;
+            padding: 20px;
+            color: white;
+            text-align: center;
+        }
+        nav {
+            display: flex;
+            justify-content: center;
+            background-color: #0073e6;
+        }
+        nav a {
+            color: white;
+            padding: 15px 20px;
+            text-decoration: none;
+            font-weight: bold;
+        }
+        nav a:hover {
+            background-color: #005bb5;
+        }
+        .hero {
+            background-image: url('https://via.placeholder.com/1500x500');
+            background-size: cover;
+            background-position: center;
+            padding: 60px 20px;
+            text-align: center;
+            color: white;
+        }
+        .hero h1 {
+            font-size: 2.5em;
+            margin: 0;
+        }
+        .hero p {
+            font-size: 1.2em;
+            margin: 10px 0 0;
+        }
+        .container {
+            padding: 20px;
+        }
+        .section-title {
+            font-size: 1.8em;
+            text-align: center;
+            margin-bottom: 20px;
+        }
+        .services, .footer {
+            display: flex;
+            justify-content: space-around;
+            flex-wrap: wrap;
+        }
+        .service-item {
+            max-width: 280px;
+            text-align: center;
+            margin: 10px;
+        }
+        .service-item img {
+            width: 100%;
+            border-radius: 10px;
+        }
+        .footer {
+            background-color: #004aad;
+            color: white;
+            padding: 20px;
+            text-align: center;
+        }
+        form label, form input, form button {
+            display: block;
+            margin: 10px auto;
+            width: 90%;
+            max-width: 300px;
+        }
+        form input, form button {
+            padding: 8px;
+        }
+        form button {
+            background-color: #004aad;
+            color: white;
+            border: none;
+            cursor: pointer;
+            font-weight: bold;
+        }
+
+        /* Responsive Design for Mobile Devices (16:9 aspect ratio) */
+        @media (max-width: 768px) {
+            .hero {
+                padding: 40px 10px;
+            }
+            .hero h1 {
+                font-size: 2em;
+            }
+            .section-title {
+                font-size: 1.5em;
+            }
+            nav a {
+                padding: 10px 15px;
+                font-size: 0.9em;
+            }
+            .service-item {
+                max-width: 100%;
+                margin: 10px 0;
+            }
+        }
+    </style>
+</head>
+<body>
+
+<header>
+    <h1>オールチビジャパン (ATJ)</h1>
+    <p>小さな旅も、素敵な思い出へ</p>
+</header>
+
+<nav>
+    <a href="#booking">フライト予約</a>
+    <a href="#services">サービス</a>
+    <a href="#about">会社概要</a>
+    <a href="#contact">お問い合わせ</a>
+</nav>
+
+<section class="hero">
+    <h1>日本国内の快適な空の旅を</h1>
+    <p>オールチビジャパンとともに新しい旅を始めましょう。</p>
+</section>
+
+<div class="container" id="booking">
+    <h2 class="section-title">フライト予約</h2>
+    <p>簡単な予約プロセスで、次の旅の計画を立てましょう。</p>
+    <form>
+        <label for="from">出発地:</label>
+        <input type="text" id="from" name="from" placeholder="例: 東京" required>
+        <label for="to">目的地:</label>
+        <input type="text" id="to" name="to" placeholder="例: 大阪" required>
+        <label for="date">出発日:</label>
+        <input type="date" id="date" name="date" required>
+        <button type="submit">検索</button>
+    </form>
+</div>
+
+<div class="container" id="services">
+    <h2 class="section-title">私たちのサービス</h2>
+    <div class="services">
+        <div class="service-item">
+            <img src="https://via.placeholder.com/300x200" alt="快適な座席">
+            <h3>快適な座席</h3>
+            <p>長時間のフライトも快適に過ごせるよう、最新の座席を提供しています。</p>
+        </div>
+        <div class="service-item">
+            <img src="https://via.placeholder.com/300x200" alt="機内エンターテインメント">
+            <h3>機内エンターテインメント</h3>
+            <p>豊富な映画や音楽で、退屈しない空の旅をお楽しみください。</p>
+        </div>
+        <div class="service-item">
+            <img src="https://via.placeholder.com/300x200" alt="おいしい機内食">
+            <h3>おいしい機内食</h3>
+            <p>日本各地の味を楽しめるよう、季節の食材を使った機内食をご用意しています。</p>
+        </div>
+    </div>
+</div>
+
+<div class="container" id="about">
+    <h2 class="section-title">会社概要</h2>
+    <p>オールチビジャパン（ATJ）は、小さな空港もつなぐ地域密着型の航空会社です。地域の皆さまと共に成長し、より多くの方に便利で快適な空の旅を提供しています。</p>
+</div>
+
+<footer class="footer" id="contact">
+    <p>&copy; 2024 オールチビジャパン - All Rights Reserved.</p>
+    <p>お問い合わせ: contact@allchibijapan.com</p>
+</footer>
+
+</body>
+</html>
+'''
+
+# Saving the updated HTML content to a new file
+responsive_file_path = "/mnt/data/ATJ_homepage_responsive.html"
+with open(responsive_file_path, "w", encoding="utf-8") as file:
+    file.write(responsive_html_content)
+
+responsive_file_path
