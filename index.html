@@ -7,8 +7,8 @@
     <style>
         /* 基本のスタイル */
         body {
-            background-color: #121212;
-            color: #f0f0f0;
+            background-color: #1a1a1a;
+            color: #d1d1d1;
             font-family: 'Courier New', Courier, monospace;
             line-height: 1.6;
             margin: 0;
@@ -18,10 +18,11 @@
 
         h1 {
             color: #e74c3c;
-            font-size: 3em;
+            font-size: 4em;
             text-transform: uppercase;
-            margin-top: 20px;
+            margin-top: 40px;
             line-height: 1.2;
+            letter-spacing: 5px;
         }
 
         h1 span {
@@ -29,17 +30,17 @@
         }
 
         h2 {
-            color: #ecf0f1;
-            font-size: 2.5em;
-            border-bottom: 2px solid #ecf0f1;
-            margin-bottom: 10px;
+            color: #ff6347;
+            font-size: 3em;
+            border-bottom: 3px solid #ff6347;
+            margin-bottom: 20px;
         }
 
         p {
-            color: #bdc3c7;
-            font-size: 1.1em;
+            color: #ccc;
+            font-size: 1.2em;
             max-width: 900px;
-            margin: 20px auto;
+            margin: 30px auto;
             text-align: justify;
         }
 
@@ -49,14 +50,15 @@
         }
 
         .warning {
-            color: #e74c3c;
-            font-size: 1.4em;
-            background-color: #2c3e50;
-            padding: 15px;
+            color: #ffffff;
+            font-size: 1.6em;
+            background-color: #e74c3c;
+            padding: 20px;
             border: 3px solid #e74c3c;
-            margin: 20px auto;
+            margin: 30px auto;
             text-align: center;
             max-width: 800px;
+            font-weight: bold;
         }
 
         .sidebar {
@@ -64,20 +66,20 @@
             top: 50%;
             left: 0;
             transform: translateY(-50%);
-            background-color: rgba(0, 0, 0, 0.8);
-            padding: 15px;
+            background-color: rgba(0, 0, 0, 0.9);
+            padding: 20px;
             color: #f0f0f0;
-            font-size: 1.2em;
-            width: 250px;
-            height: 300px;
-            box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.5);
+            font-size: 1.4em;
+            width: 300px;
+            height: auto;
+            box-shadow: 10px 10px 25px rgba(0, 0, 0, 0.8);
         }
 
         .sidebar h3 {
-            color: #e74c3c;
+            color: #ff6347;
             text-transform: uppercase;
-            font-size: 1.5em;
-            margin-bottom: 10px;
+            font-size: 1.8em;
+            margin-bottom: 15px;
         }
 
         .footer {
@@ -87,7 +89,7 @@
             width: 100%;
             bottom: 0;
             color: #ecf0f1;
-            font-size: 1em;
+            font-size: 1.1em;
         }
 
         .footer a {
@@ -102,20 +104,22 @@
 
         .text-red {
             color: #e74c3c;
+            font-weight: bold;
+            text-decoration: underline;
         }
 
         /* レスポンシブデザイン */
         @media (max-width: 1200px) {
             h1 {
-                font-size: 2.5em;
+                font-size: 3em;
             }
 
             h2 {
-                font-size: 2em;
+                font-size: 2.5em;
             }
 
             p {
-                font-size: 1.05em;
+                font-size: 1.1em;
             }
 
             .container {
@@ -123,8 +127,8 @@
             }
 
             .warning {
-                font-size: 1.2em;
-                padding: 12px;
+                font-size: 1.3em;
+                padding: 15px;
             }
 
             .sidebar {
@@ -134,7 +138,43 @@
 
         @media (max-width: 768px) {
             h1 {
+                font-size: 2.5em;
+            }
+
+            h2 {
                 font-size: 2em;
+            }
+
+            p {
+                font-size: 1.3em;
+            }
+
+            .warning {
+                font-size: 1.2em;
+                padding: 12px;
+            }
+
+            .footer {
+                font-size: 1em;
+            }
+
+            .container {
+                width: 90%;
+            }
+
+            .sidebar {
+                width: 250px;
+                font-size: 1.2em;
+                height: auto;
+                position: static;
+                transform: none;
+                margin-bottom: 25px;
+            }
+        }
+
+        @media (max-width: 480px) {
+            h1 {
+                font-size: 2.2em;
             }
 
             h2 {
@@ -155,42 +195,6 @@
             }
 
             .container {
-                width: 90%;
-            }
-
-            .sidebar {
-                width: 200px;
-                font-size: 1em;
-                height: auto;
-                position: static;
-                transform: none;
-                margin-bottom: 20px;
-            }
-        }
-
-        @media (max-width: 480px) {
-            h1 {
-                font-size: 1.7em;
-            }
-
-            h2 {
-                font-size: 1.6em;
-            }
-
-            p {
-                font-size: 1.1em;
-            }
-
-            .warning {
-                font-size: 1em;
-                padding: 8px;
-            }
-
-            .footer {
-                font-size: 0.8em;
-            }
-
-            .container {
                 width: 95%;
             }
         }
@@ -199,32 +203,36 @@
 <body>
 
     <div class="container">
-        <h1><span>野獣先輩は生きていた！</span>ヌゥン！へッ！ヘッ！<span>政府と野獣帝国の</span></span>恐るべき陰謀</span></h1>
+        <h1><span>野獣先輩は生きていた！</span>秘密の世界、政府と</span>野獣帝国の陰謀<span>が絡み合う</span></h1>
 
-        <h2>1. 野獣先輩の「死」：政府と野獣帝国の協力関係</h2>
-        <p>数年前、「野獣先輩」の名前が突然消えた時、我々はそれをただの偶然、あるいは普通の引退だと考えていた。しかし、それは全て巧妙に仕組まれた政府と野獣帝国の陰謀だったのだ……。</p>
+        <h2>1. 野獣先輩の「死」：政府と野獣帝国の暗躍</h2>
+        <p>数年前、突然消えた「野獣先輩」の名前。その背後に潜んでいたのは、ただの引退ではなく、政府と「野獣帝国」からの計り知れない操作と裏取引だった…</p>
 
-        <h2>2. 記憶操作と「生存」の秘密</h2>
-        <p>野獣先輩の「死後」、実は彼は一度も死んでいなかった。政府と野獣帝国は、彼の身体を冷凍保存し、記憶をリセットすることによって、新しい人格を作り上げた……</p>
+        <h2>2. 記憶操作と「生存」の衝撃的な真実</h2>
+        <p>「死んだはずの彼」が実は今も生きていた…。政府と「野獣帝国」の秘密の手によって、野獣先輩は一度も死んでいなかった！記憶操作と人格改造で新しい命を与えられたのだ…</p>
 
-        <h2>3. 野獣帝国と政府の裏取引</h2>
-        <p>「野獣帝国」とは一体何か。彼らは数十年にわたり世界各国の政府と密接に関わり、影で操作を行ってきた超国家的なネットワークだ…</p>
+        <h2>3. 野獣帝国と政府の壮大な陰謀</h2>
+        <p>「野獣帝国」、それは単なる都市伝説ではない。世界のすべてを裏で操る、恐るべきネットワークだった…。政府との取引は、この世の理すらも超越していた…</p>
 
-        <div class="warning">警告：あなたの記憶も操作されているかもしれません！政府と野獣帝国の影響から逃れることはできるのか！？</div>
+        <div class="warning">⚠️ 警告：あなたの記憶も操作されているかもしれません。見ているこのページも、未来には消されている可能性が…信じますか？</div>
 
-        <h2>4. 政府による「情報封鎖」</h2>
-        <p>「野獣先輩の復活」を信じる者はすでに不審な失踪を遂げている…。これもまた、政府と野獣帝国による「情報封鎖」の一環だという。</p>
+        <h2>4. 政府による「情報封鎖」と隠蔽の恐怖</h2>
+        <p>「野獣先輩の復活」を信じる者たちに、次々と起きた異常な失踪事件。すべては「情報封鎖」の一部であり、我々の記憶そのものを消し去ろうとしているのだ…</p>
 
-        <h2>5. 新世界秩序の誕生</h2>
-        <p>野獣帝国とその背後に潜む者たちは、ついに世界を支配するための「新世界秩序」を確立しようとしている…</p>
+        <h2>5. 新世界秩序：政府と野獣帝国の支配計画</h2>
+        <p>野獣帝国が目指すのは「新世界秩序」…。世界はすでに裏で支配されつつあり、彼らの計画は今まさに動き出しているのだ。</p>
 
-        <h2>6. 目を覚ませ、我々の記憶が消される前に</h2>
-        <p>今、あなたが読んでいるこの文章も、すでに「記憶操作」によって「無かったこと」にされる可能性がある…</p>
+        <h2>6. 目を覚ませ、記憶を消される前に</h2>
+        <p>今、あなたが読んでいるこのページも…「操作」されている可能性がある。すべての記憶は消され、未来のあなたは「何もなかった」と信じることになるかもしれない…</p>
 
         <div class="sidebar">
-            <h3>危険な真実</h3>
-            <p><span class="text-red">あなたは今、知らず知らずのうちに「操作」されているかもしれない…</span></p>
+            <h3>あなたが知らない恐ろしい真実</h3>
+            <p><span class="text-red">あなたは今、すでに「操作」されているかもしれない…すべてを信じてはならない。</span></p>
         </div>
+    </div>
+
+    <div class="footer">
+        <p>© 2024 野獣帝国の真実。すべての知識は操作されています。<a href="#">詳しく知りたい</a></p>
     </div>
 
 </body>
