@@ -14,15 +14,17 @@
             margin: 0;
             padding: 0;
             text-align: center;
+            overflow-x: hidden;
         }
 
         h1 {
             color: #e74c3c;
-            font-size: 4em;
+            font-size: 4.5em;
             text-transform: uppercase;
             margin-top: 40px;
             line-height: 1.2;
             letter-spacing: 5px;
+            text-shadow: 3px 3px 10px rgba(0, 0, 0, 0.8);
         }
 
         h1 span {
@@ -32,8 +34,9 @@
         h2 {
             color: #ff6347;
             font-size: 3em;
-            border-bottom: 3px solid #ff6347;
+            border-bottom: 4px solid #ff6347;
             margin-bottom: 20px;
+            text-shadow: 1px 1px 6px rgba(0, 0, 0, 0.7);
         }
 
         p {
@@ -42,37 +45,55 @@
             max-width: 900px;
             margin: 30px auto;
             text-align: justify;
+            text-shadow: 1px 1px 5px rgba(0, 0, 0, 0.6);
         }
 
         .container {
             width: 90%;
             margin: 0 auto;
+            position: relative;
+            z-index: 1;
         }
 
         .warning {
             color: #ffffff;
             font-size: 1.6em;
-            background-color: #e74c3c;
+            background-color: rgba(231, 76, 60, 0.9);
             padding: 20px;
             border: 3px solid #e74c3c;
             margin: 30px auto;
             text-align: center;
             max-width: 800px;
             font-weight: bold;
+            box-shadow: 0 0 15px rgba(0, 0, 0, 0.7);
+            animation: flicker 2s infinite alternate;
+        }
+
+        @keyframes flicker {
+            0% {
+                opacity: 1;
+            }
+            50% {
+                opacity: 0.6;
+            }
+            100% {
+                opacity: 1;
+            }
         }
 
         .sidebar {
             position: fixed;
-            top: 50%;
-            left: 0;
-            transform: translateY(-50%);
+            top: 20%;
+            left: -300px;
+            width: 300px;
             background-color: rgba(0, 0, 0, 0.9);
             padding: 20px;
             color: #f0f0f0;
             font-size: 1.4em;
-            width: 300px;
-            height: auto;
-            box-shadow: 10px 10px 25px rgba(0, 0, 0, 0.8);
+            box-shadow: 0 0 25px rgba(0, 0, 0, 0.8);
+            transform: rotate(-5deg);
+            z-index: 100;
+            transition: left 0.5s ease-in-out;
         }
 
         .sidebar h3 {
@@ -80,6 +101,11 @@
             text-transform: uppercase;
             font-size: 1.8em;
             margin-bottom: 15px;
+            text-shadow: 1px 1px 5px rgba(0, 0, 0, 0.7);
+        }
+
+        .sidebar.active {
+            left: 10px;
         }
 
         .footer {
@@ -90,6 +116,8 @@
             bottom: 0;
             color: #ecf0f1;
             font-size: 1.1em;
+            text-shadow: 1px 1px 6px rgba(0, 0, 0, 0.7);
+            z-index: 1;
         }
 
         .footer a {
@@ -108,10 +136,31 @@
             text-decoration: underline;
         }
 
+        /* 不気味な背景効果 */
+        .background-effect {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            width: 200%;
+            height: 200%;
+            background: rgba(255, 255, 255, 0.1);
+            box-shadow: 0 0 25px rgba(255, 255, 255, 0.1);
+            filter: blur(10px);
+            animation: moveBackground 10s linear infinite;
+            z-index: -1;
+        }
+
+        @keyframes moveBackground {
+            0% { transform: translate(-50%, -50%) rotate(0); }
+            50% { transform: translate(-45%, -45%) rotate(180deg); }
+            100% { transform: translate(-50%, -50%) rotate(360deg); }
+        }
+
         /* レスポンシブデザイン */
         @media (max-width: 1200px) {
             h1 {
-                font-size: 3em;
+                font-size: 3.5em;
             }
 
             h2 {
@@ -202,6 +251,8 @@
 </head>
 <body>
 
+    <div class="background-effect"></div>
+
     <div class="container">
         <h1><span>野獣先輩は生きていた！</span>秘密の世界、政府と</span>野獣帝国の陰謀<span>が絡み合う</span></h1>
 
@@ -225,7 +276,7 @@
         <h2>6. 目を覚ませ、記憶を消される前に</h2>
         <p>今、あなたが読んでいるこのページも…「操作」されている可能性がある。すべての記憶は消され、未来のあなたは「何もなかった」と信じることになるかもしれない…</p>
 
-        <div class="sidebar">
+        <div class="sidebar active">
             <h3>あなたが知らない恐ろしい真実</h3>
             <p><span class="text-red">あなたは今、すでに「操作」されているかもしれない…すべてを信じてはならない。</span></p>
         </div>
