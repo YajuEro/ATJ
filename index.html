@@ -3,184 +3,156 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>オールチビジャパン - ATJ</title>
+    <title>野獣先輩は生きていた！陰謀の真実</title>
     <style>
+        /* 基本のスタイル */
         body {
-            font-family: Arial, sans-serif;
+            background-color: #121212;
+            color: #f0f0f0;
+            font-family: 'Courier New', Courier, monospace;
+            line-height: 1.6;
             margin: 0;
             padding: 0;
-            color: #333;
-        }
-        header {
-            background-color: #004aad;
-            padding: 20px;
-            color: white;
             text-align: center;
         }
-        nav {
-            display: flex;
-            justify-content: center;
-            background-color: #0073e6;
-            flex-wrap: wrap;
+
+        h1 {
+            color: #e74c3c;
+            font-size: 4em;
+            text-transform: uppercase;
+            margin-top: 20px;
         }
-        nav a {
-            color: white;
-            padding: 15px 20px;
-            text-decoration: none;
-            font-weight: bold;
-            font-size: 0.9em;
-        }
-        nav a:hover {
-            background-color: #005bb5;
-        }
-        .hero {
-            background-image: url('https://via.placeholder.com/1500x500');
-            background-size: cover;
-            background-position: center;
-            padding: 60px 20px;
-            text-align: center;
-            color: white;
-        }
-        .hero h1 {
+
+        h2 {
+            color: #ecf0f1;
             font-size: 2.5em;
-            margin: 0;
+            border-bottom: 2px solid #ecf0f1;
+            margin-bottom: 10px;
         }
-        .hero p {
-            font-size: 1.2em;
-            margin: 10px 0 0;
+
+        p {
+            color: #bdc3c7;
+            font-size: 1.1em;
+            max-width: 900px;
+            margin: 20px auto;
+            text-align: justify;
         }
+
         .container {
-            padding: 20px;
-        }
-        .section-title {
-            font-size: 1.8em;
-            text-align: center;
-            margin-bottom: 20px;
-        }
-        .services, .footer {
-            display: flex;
-            justify-content: space-around;
-            flex-wrap: wrap;
-        }
-        .service-item {
-            max-width: 280px;
-            text-align: center;
-            margin: 10px;
-        }
-        .service-item img {
-            width: 100%;
-            border-radius: 10px;
-        }
-        .footer {
-            background-color: #004aad;
-            color: white;
-            padding: 20px;
-            text-align: center;
-        }
-        form label, form input, form button {
-            display: block;
-            margin: 10px auto;
             width: 90%;
-            max-width: 300px;
+            margin: 0 auto;
         }
-        form input, form button {
-            padding: 8px;
+
+        .warning {
+            color: #e74c3c;
+            font-size: 1.4em;
+            background-color: #2c3e50;
+            padding: 15px;
+            border: 3px solid #e74c3c;
+            margin: 20px auto;
+            text-align: center;
+            max-width: 800px;
         }
-        form button {
-            background-color: #004aad;
-            color: white;
-            border: none;
-            cursor: pointer;
+
+        .sidebar {
+            position: fixed;
+            top: 50%;
+            left: 0;
+            transform: translateY(-50%);
+            background-color: rgba(0, 0, 0, 0.8);
+            padding: 15px;
+            color: #f0f0f0;
+            font-size: 1.2em;
+            width: 250px;
+            height: 300px;
+            box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.5);
+        }
+
+        .sidebar h3 {
+            color: #e74c3c;
+            text-transform: uppercase;
+            font-size: 1.5em;
+            margin-bottom: 10px;
+        }
+
+        .footer {
+            background-color: #2c3e50;
+            padding: 20px;
+            position: absolute;
+            width: 100%;
+            bottom: 0;
+            color: #ecf0f1;
+            font-size: 1em;
+        }
+
+        .footer a {
+            color: #f39c12;
+            text-decoration: none;
             font-weight: bold;
         }
 
-        /* Responsive Design for Mobile Devices (16:9 aspect ratio) */
-        @media (max-width: 768px) {
-            .hero {
-                padding: 30px 10px;
-            }
-            .hero h1 {
-                font-size: 2em;
-            }
-            .hero p {
-                font-size: 1em;
-            }
-            .section-title {
-                font-size: 1.5em;
-            }
-            nav a {
-                padding: 10px 10px;
-            }
-            .service-item {
-                max-width: 100%;
-                margin: 15px 0;
-            }
+        .footer a:hover {
+            text-decoration: underline;
+        }
+
+        .text-red {
+            color: #e74c3c;
+        }
+
+        .scrolling-text {
+            background: black;
+            color: red;
+            font-size: 2em;
+            padding: 10px;
+            border: 2px solid red;
+            margin: 20px auto;
+            width: 80%;
+            font-family: 'Courier New', Courier, monospace;
+            animation: scroll-text 10s linear infinite;
+        }
+
+        @keyframes scroll-text {
+            0% { transform: translateX(100%); }
+            100% { transform: translateX(-100%); }
         }
     </style>
 </head>
 <body>
 
-<header>
-    <h1>オールチビジャパン (ATJ)</h1>
-    <p>小さな旅も、素敵な思い出へ</p>
-</header>
+    <div class="scrolling-text">警告！野獣帝国の陰謀が暴かれつつある！警告！</div>
 
-<nav>
-    <a href="#booking">フライト予約</a>
-    <a href="#services">サービス</a>
-    <a href="#about">会社概要</a>
-    <a href="#contact">お問い合わせ</a>
-</nav>
+    <div class="container">
+        <h1>野獣先輩は生きていた！政府と野獣帝国の恐るべき陰謀</h1>
 
-<section class="hero">
-    <h1>日本国内の快適な空の旅を</h1>
-    <p>オールチビジャパンとともに新しい旅を始めましょう。</p>
-</section>
+        <h2>1. 野獣先輩の「死」：政府と野獣帝国の協力関係</h2>
+        <p>数年前、「野獣先輩」の名前が突然消えた時、我々はそれをただの偶然、あるいは普通の引退だと考えていた。しかし、それは全て巧妙に仕組まれた政府と野獣帝国の陰謀だったのだ……。</p>
 
-<div class="container" id="booking">
-    <h2 class="section-title">フライト予約</h2>
-    <p>簡単な予約プロセスで、次の旅の計画を立てましょう。</p>
-    <form>
-        <label for="from">出発地:</label>
-        <input type="text" id="from" name="from" placeholder="例: 東京" required>
-        <label for="to">目的地:</label>
-        <input type="text" id="to" name="to" placeholder="例: 大阪" required>
-        <label for="date">出発日:</label>
-        <input type="date" id="date" name="date" required>
-        <button type="submit">検索</button>
-    </form>
-</div>
+        <h2>2. 記憶操作と「生存」の秘密</h2>
+        <p>野獣先輩の「死後」、実は彼は一度も死んでいなかった。政府と野獣帝国は、彼の身体を冷凍保存し、記憶をリセットすることによって、新しい人格を作り上げた……</p>
 
-<div class="container" id="services">
-    <h2 class="section-title">私たちのサービス</h2>
-    <div class="services">
-        <div class="service-item">
-            <img src="https://via.placeholder.com/300x200" alt="快適な座席">
-            <h3>快適な座席</h3>
-            <p>長時間のフライトも快適に過ごせるよう、最新の座席を提供しています。</p>
-        </div>
-        <div class="service-item">
-            <img src="https://via.placeholder.com/300x200" alt="機内エンターテインメント">
-            <h3>機内エンターテインメント</h3>
-            <p>豊富な映画や音楽で、退屈しない空の旅をお楽しみください。</p>
-        </div>
-        <div class="service-item">
-            <img src="https://via.placeholder.com/300x200" alt="おいしい機内食">
-            <h3>おいしい機内食</h3>
-            <p>日本各地の味を楽しめるよう、季節の食材を使った機内食をご用意しています。</p>
+        <h2>3. 野獣帝国と政府の裏取引</h2>
+        <p>「野獣帝国」とは一体何か。彼らは数十年にわたり世界各国の政府と密接に関わり、影で操作を行ってきた超国家的なネットワークだ…</p>
+
+        <div class="warning">警告：あなたの記憶も操作されているかもしれません！政府と野獣帝国の影響から逃れることはできるのか！？</div>
+
+        <h2>4. 政府による「情報封鎖」</h2>
+        <p>「野獣先輩の復活」を信じる者はすでに不審な失踪を遂げている…。これもまた、政府と野獣帝国による「情報封鎖」の一環だという。</p>
+
+        <h2>5. 新世界秩序の誕生</h2>
+        <p>野獣帝国とその背後に潜む者たちは、ついに世界を支配するための「新世界秩序」を確立しようとしている…</p>
+
+        <h2>6. 目を覚ませ、我々の記憶が消される前に</h2>
+        <p>今、あなたが読んでいるこの文章も、すでに「記憶操作」によって「無かったこと」にされる可能性がある…</p>
+
+        <div class="sidebar">
+            <h3>危険な真実</h3>
+            <p><span class="text-red">あなたは今、知らず知らずのうちに「操作」されているかもしれない…</span></p>
         </div>
     </div>
-</div>
 
-<div class="container" id="about">
-    <h2 class="section-title">会社概要</h2>
-    <p>オールチビジャパン（ATJ）は、小さな空港もつなぐ地域密着型の航空会社です。地域の皆さまと共に成長し、より多くの方に便利で快適な空の旅を提供しています。</p>
-</div>
-
-<footer class="footer" id="contact">
-    <p>&copy; 2024 オールチビジャパン - All Rights Reserved.</p>
-    <p>お問い合わせ: contact@allchibijapan.com</p>
-</footer>
+    <div class="footer">
+        <p>© 2024 野獣帝国の真実. <a href="http://www.bugeisenpai.com">公式サイト</a></p>
+    </div>
 
 </body>
 </html>
