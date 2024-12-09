@@ -115,6 +115,105 @@
             0% { transform: translateX(100%); }
             100% { transform: translateX(-100%); }
         }
+
+        /* レスポンシブデザイン */
+        @media (max-width: 1200px) {
+            h1 {
+                font-size: 3em;
+            }
+
+            h2 {
+                font-size: 2em;
+            }
+
+            p {
+                font-size: 1.05em;
+            }
+
+            .container {
+                width: 85%;
+            }
+
+            .warning {
+                font-size: 1.2em;
+                padding: 12px;
+            }
+
+            .sidebar {
+                display: none;
+            }
+        }
+
+        @media (max-width: 768px) {
+            h1 {
+                font-size: 2.5em;
+            }
+
+            h2 {
+                font-size: 1.8em;
+            }
+
+            p {
+                font-size: 1.2em;
+            }
+
+            .warning {
+                font-size: 1.1em;
+                padding: 10px;
+            }
+
+            .footer {
+                font-size: 0.9em;
+            }
+
+            .scrolling-text {
+                font-size: 1.5em;
+            }
+
+            .container {
+                width: 90%;
+            }
+
+            .sidebar {
+                width: 200px;
+                font-size: 1em;
+                height: auto;
+                position: static;
+                transform: none;
+                margin-bottom: 20px;
+            }
+        }
+
+        @media (max-width: 480px) {
+            h1 {
+                font-size: 2em;
+            }
+
+            h2 {
+                font-size: 1.6em;
+            }
+
+            p {
+                font-size: 1.1em;
+            }
+
+            .warning {
+                font-size: 1em;
+                padding: 8px;
+            }
+
+            .footer {
+                font-size: 0.8em;
+            }
+
+            .scrolling-text {
+                font-size: 1.2em;
+            }
+
+            .container {
+                width: 95%;
+            }
+        }
     </style>
 </head>
 <body>
