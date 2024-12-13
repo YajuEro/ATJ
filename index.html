@@ -3,35 +3,47 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>野獣先輩が回転するだけのサイト</title>
+    <title>画像回転と拡大</title>
     <style>
         body {
+            margin: 0;
+            overflow: hidden;
+            height: 100vh;
             display: flex;
             justify-content: center;
             align-items: center;
-            height: 100vh;
-            margin: 0;
             background-color: #000;
-            overflow: hidden;
         }
 
-        img {
-            width: 200px;
-            height: 200px;
-            animation: rotate 5s linear infinite;
+        #image {
+            width: 100px;
+            height: 100px;
+            transition: transform 1s ease-in-out;
         }
 
-        @keyframes rotate {
+        @keyframes rotateGrow {
             0% {
-                transform: rotate(0deg);
+                transform: rotate(0deg) scale(1);
             }
             100% {
-                transform: rotate(360deg);
+                transform: rotate(3600deg) scale(10);
             }
+        }
+
+        #image {
+            animation: rotateGrow 10s forwards;
         }
     </style>
 </head>
 <body>
-    <img src="IMG_9443.jpeg" alt="野獣先輩">
+    <img id="image" src="IMG_9443.jpeg" alt="野獣先輩" />
+    
+    <script>
+        // アニメーション終了後に指定したURLへ遷移
+        const image = document.getElementById('image');
+        image.addEventListener('animationend', function() {
+            window.location.href = 'https://x.com/japanshortpro/';
+        });
+    </script>
 </body>
 </html>
