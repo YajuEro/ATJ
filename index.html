@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>ごめんね。今編集中</title>
+    <title>野獣先輩が回転するだけのサイト</title>
     <style>
         body {
             display: flex;
@@ -11,13 +11,27 @@
             align-items: center;
             height: 100vh;
             margin: 0;
-            font-family: Arial, sans-serif;
-            background-color: #f9f9f9;
-            color: #333;
+            background-color: #000;
+            overflow: hidden;
+        }
+
+        img {
+            width: 200px;
+            height: 200px;
+            animation: rotate 5s linear infinite;
+        }
+
+        @keyframes rotate {
+            0% {
+                transform: rotate(0deg);
+            }
+            100% {
+                transform: rotate(360deg);
+            }
         }
     </style>
 </head>
 <body>
-    <div>ごめんね。今編集中。<br>このサイトは陰謀論のネタサイトだよ。</div>
+    <img src="野獣.jpeg" alt="野獣先輩">
 </body>
 </html>
